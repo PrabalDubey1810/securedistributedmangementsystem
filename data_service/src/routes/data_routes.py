@@ -1,6 +1,8 @@
 from fastapi import APIRouter, Header
-from middlewares.jwt_middleware import verify
-from controllers.data_controller import get_private_data
+from src.middlewares.jwt_middleware import verify
+from src.controllers.data_controller import get_private_data
+
+
 
 router = APIRouter()
 

@@ -1,4 +1,4 @@
-from config.db import data_col
+from src.config.db import data_col
 
 
 def get_private_data(username):
