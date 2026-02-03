@@ -37,3 +37,81 @@ Click Send.
 
 
 🎉 User created.
+
+
+
+
+
+LOGIN Using Postman
+
+Now login.
+
+✅ Step 1: New Request
+
+Method:
+
+POST
+http://localhost:8000/auth/login
+
+✅ Step 2: Body (JSON)
+{
+  "username": "prabal",
+  "password": "1234"
+}
+
+✅ Step 3: Send
+
+Response:
+
+{
+  "token": "eyJhbGciOiJIUzI1..."
+}
+
+
+Copy this token.
+
+
+
+
+
+ACCESS PROTECTED DATA (Important Part)
+
+Now we use token.
+
+✅ Step 1: New Request
+
+Method:
+
+GET
+http://localhost:8000/data
+
+✅ Step 2: Add Header
+
+Click:
+
+Headers
+
+
+Add:
+
+Key	Value
+Authorization	Bearer YOUR_TOKEN
+
+Example:
+
+Bearer eyJhbGciOiJIUzI1...
+
+
+⚠️ Include "Bearer " before token.
+
+✅ Step 3: Send
+
+Response:
+
+{
+  "data": "Welcome to private data"
+}
+
+
+🎉 Success.
+
